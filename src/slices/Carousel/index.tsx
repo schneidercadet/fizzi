@@ -43,8 +43,8 @@ export type CarouselProps = SliceComponentProps<Content.CarouselSlice>;
  * Component for "Carousel" Slices.
  */
 
- {/* @ts-expect-error - works as expected */}
-const Carousel = ({ slice }: CarouselProps): JSX.Element => {
+
+const Carousel = ({ slice }: CarouselProps): React.JSX.Element => {
   const [currentFlavorIndex, setCurrentFlavorIndex] = useState(0);
   const sodaCanRef = useRef<Group>(null);
 
@@ -105,7 +105,6 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
         />
         {/* Can */}
         <View className="aspect-square h-[70vmin] min-h-40">
-          {/* @ts-expect-error - Position prop works as expected */}
           <Center position={[0, 0, 1.5]}>
             <FloatingCan
               ref={sodaCanRef}

@@ -181,7 +181,6 @@ function ThreeText({
   return words.map((word: string, wordIndex: number) => (
     <Text
       key={`${wordIndex}-${word}`}
-      // @ts-expect-error - Scale prop works as expected
       scale={isDesktop ? 1 : 0.5}
       color={color}
       material={material}
